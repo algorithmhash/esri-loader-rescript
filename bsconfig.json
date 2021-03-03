@@ -1,6 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/rescript-lang/rescript-compiler/master/docs/docson/build-schema.json",
-  "name": "esri-loader-rescript",
+  "name": "rescript-esriloader",
   "version": "0.0.1",
   "sources": {
     "dir" : "src",

@@ -1,5 +1,5 @@
 {
-  "name": "@specter_nexus/rescript-esriloader",
+  "name": "rescript-esriloader",
   "version": "0.1.8",
   "scripts": {
     "build": "bsb -make-world",
@@ -17,9 +17,6 @@
   },
   "dependencies": {
     "esri-loader": "^3.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "description": "Library for using esri loader in rescript.",
   "repository": {
