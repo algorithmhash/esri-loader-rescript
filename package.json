@@ -1,6 +1,6 @@
 {
-  "name": "esri-loader-rescript",
-  "version": "0.0.1",
+  "name": "@username/esri-loader-rescript",
+  "version": "0.1.2",
   "scripts": {
     "build": "bsb -make-world",
     "clean": "bsb -clean-world",
@@ -9,7 +9,7 @@
   "keywords": [
     "rescript"
   ],
-  "author": "",
+  "author": "algorithmhash <complexalgorithminserthere@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "^9.0.1",
@@ -17,5 +17,15 @@
   },
   "dependencies": {
     "esri-loader": "^3.0.0"
-  }
+  },
+  "description": "Library for using esri loader in rescript.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algorithmhash/esri-loader-rescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/algorithmhash/esri-loader-rescript/issues"
+  },
+  "homepage": "https://github.com/algorithmhash/esri-loader-rescript#readme"
 }
