@@ -1,6 +1,6 @@
 {
-  "name": "@username/esri-loader-rescript",
-  "version": "0.1.2",
+  "name": "@specter_nexus/rescript-esriloader",
+  "version": "0.1.6",
   "scripts": {
     "build": "bsb -make-world",
     "clean": "bsb -clean-world",
@@ -19,7 +19,6 @@
     "esri-loader": "^3.0.0"
   },
   "description": "Library for using esri loader in rescript.",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/algorithmhash/esri-loader-rescript.git"
