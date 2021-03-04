@@ -28,16 +28,23 @@ Then rerunning your build script for your application, usually for me it's ``yar
 # Usage example
 ```
 open EsriLoader;
-//this is pretty much a rescript looking implementation that heavily resembles the javascript api one
-//we include the array of modules we want to import and return a resolved promise of imported modules
+    //This is pretty much a rescript looking implementation
+    //that heavily resembles the javascript api one.
+
+    //We include the array of modules we want to import
+    //and return a resolved promise of imported modules.
 
 loadModules(["esri/config"])->Js.Promise.then_((deps) => {
-// we have a switch for matching the package and what it returns
-// this definitely works when we need to target indexes within an array effectively
+// We have a switch for matching the package and what it returns.
+// This definitely works when we need to
+// target indexes within an array effectively.
+
     switch deps {
-    // in this case we are loading the esriConfig module that then gives us the opportunity to
-    // access data within esri through an api key
+    // in this case we are loading the esriConfig module
+    // that then gives us the opportunity to
+    // access data within esri through a given api key
         | [esriConfig] => 
+            esriConfig["apiKey"] = "key_given"
             Js.log("Module successfully loaded")
             Js.log(esriConfig)
             //this is our bug catcher, even though it may resolve we could potentially run
@@ -45,15 +52,18 @@ loadModules(["esri/config"])->Js.Promise.then_((deps) => {
         | _=> Js.log("There was an error, make sure you are importing a real package from esri.")
         
     }
-    // here is just a normal resolve, you can target specifics here but not neccessary as we want
-    // to load multiple and it's ten times cleaner and more understandable to just 
-    // leave a promise resolve like so
-    Js.Promise.resolve()
-},_)->ignore // ignores bugs that will be ironed out in future rescript releases
+    // Here is just a normal resolve. 
+    // You can target specifics here but not neccessary as we want
+    // to load multiple and it's ten times cleaner and more
+    // understandable to just leave a promise resolve like so.
 
-loadCss("3.35") //also can directly target a server url or locally
+    Js.Promise.resolve()
+},_)->ignore // <-- Ignores bugs that will be ironed out in future rescript releases.
+
+loadCss("3.35") // <-- Also can directly target a server url or locally
                //hosted version
-// this targets default options which is pretty self explanatory 
+
+// This below targets default options which is pretty self explanatory.
 setDefaultOptions({
     version: "",
     url:"http://server/path/to/esri",
@@ -65,6 +75,7 @@ setDefaultOptions({
 
 # Rescript thoughts
 I love rescript. So I might be a bit biased but it's for a good reason. Too much for me to tell you why so check it out here at their docs 
+Rescript docs -> https://rescript-lang.org/docs/manual/latest/introduction
 
 # AMD module import
 So I mentioned AMD module import and the esri loader actually uses dojo I believe. The core library does not. Here is a bit more material on it from multiple sites:
