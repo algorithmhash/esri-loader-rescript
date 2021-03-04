@@ -1,3 +1,6 @@
+# Current status
+This is a WIP, contributions are welcome.
+
 # Esri loader for rescript
 Library for using esri loader in rescript. It targets the main methods used to create applications that utilize Esri data.
 
